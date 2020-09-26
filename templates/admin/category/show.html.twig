@@ -1,0 +1,67 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Category{% endblock %}
+
+{% block body %}
+<div class="dashboard-wrapper">
+    <div class="container-fluid dashboard-content">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h3 class="text-center">
+
+
+    <h1>Show Category Page</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ category.id }}</td>
+            </tr>
+            <tr>
+                <th>Parentid</th>
+                <td>{{ category.parentid }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ category.title }}</td>
+            </tr>
+            <tr>
+                <th>Keywords</th>
+                <td>{{ category.keywords }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ category.description }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ category.image }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ category.status }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ category.createdAt ? category.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Updated_at</th>
+                <td>{{ category.updatedAt ? category.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+                    <div class="card-body border-top">
+                        <a href="{{ path('admin_category_index') }}" <span class="btn btn-success">back to list</span></a>
+
+                        <a href="{{ path('admin_category_edit', {'id': category.id}) }}"  <span class="btn btn-secondary">edit</span></a>
+                    </div>
+                </h3>
+             {{ include('admin/category/_delete_form.html.twig') }}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

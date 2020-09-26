@@ -1,0 +1,95 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}New Araba{% endblock %}
+
+{% block body %}
+
+
+
+<section class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+
+
+                    <aside class="col-md-4 column">
+
+                        <div class="follow_widget widget">
+
+
+                        </div><!-- Follow Widget -->
+
+                        <div class="search_widget widget">
+                            <div class="heading2">
+
+                                <h2>Welcome</h2>
+
+                            </div>
+
+
+                            {{ include('user/usermenu.html.twig') }}
+
+
+                    </aside>
+
+                    <div class="col-md-8 column">
+                        <div class="single-post-sec">
+                            <div class="blog-post">
+                                <div class="post-thumb">
+
+                                    <div class="category_widget widget">
+                                        <div class="heading2">
+
+
+
+                                        <h1>Create new Araba</h1>
+
+    {{ include('araba/_form.html.twig') }}
+
+
+                                            <div class="col-md-12">
+    <a href="{{ path('user_araba_index') }}">back to list</a>
+
+                                        </div>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div><!-- Blog Post -->
+                    </div><!-- Blog POst Sec -->
+                </div>
+
+
+            </div>
+            <div class="related-posts">
+
+                <div class="related">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="post-style2">
+
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Related Posts -->
+
+
+            </div><!-- Comment -->
+        </div>
+    </div>
+    </div>
+</section>
+
+
+{% endblock %}

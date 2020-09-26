@@ -1,0 +1,22 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}New Rent{% endblock %}
+
+{% block body %}
+<div class="dashboard-wrapper">
+    <div class="container-fluid dashboard-content">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h3 class="text-center">
+    <h1>Create new Rent</h1>
+
+    {{ include('admin/rent/_form.html.twig') }}
+
+    <a href="{{ path('admin_rent_index') }}">back to list</a>
+                       </div>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

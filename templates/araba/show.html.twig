@@ -1,0 +1,155 @@
+{% extends 'homebase.html.twig' %}
+
+
+{% block title %}Welcome to Show{% endblock %}
+
+
+{% block body %}
+
+    <section class="block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+
+
+                        <aside class="col-md-4 column">
+
+                            <div class="follow_widget widget">
+
+
+                            </div><!-- Follow Widget -->
+
+                            <div class="search_widget widget">
+                                <div class="heading2">
+
+                                    <h2>Welcome</h2>
+
+                                </div>
+
+
+                                {{ include('user/usermenu.html.twig') }}
+
+
+                        </aside>
+
+                        <div class="col-md-8 column">
+                            <div class="single-post-sec">
+                                <div class="blog-post">
+                                    <div class="post-thumb">
+
+                                        <div class="category_widget widget">
+                                            <div class="heading2">
+
+
+                                            <h1>Araba</h1>
+
+                                                <table class="table">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th>Id</th>
+                                                        <td>{{ araba.id }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Title</th>
+                                                        <td>{{ araba.title }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Keywords</th>
+                                                        <td>{{ araba.keywords }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Description</th>
+                                                        <td>{{ araba.description }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Image</th>
+                                                        <td>{{ araba.image }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Rating</th>
+                                                        <td>{{ araba.rating }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Address</th>
+                                                        <td>{{ araba.address }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Phone</th>
+                                                        <td>{{ araba.phone }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Email</th>
+                                                        <td>{{ araba.email }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>City</th>
+                                                        <td>{{ araba.city }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Location</th>
+                                                        <td>{{ araba.location }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Status</th>
+                                                        <td>{{ araba.status }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Detail</th>
+                                                        <td>{{ araba.detail }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Userid</th>
+                                                        <td>{{ araba.userid }}</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <div class="col-md-12">
+                                                    <div class="submit">
+                                                        <a href="{{ path('user_araba_edit', {'id': araba.id}) }}" input class="btn flat-btn" id="profile_submit" type="submit">edit</a>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div><!-- Blog Post -->
+                                    </div><!-- Blog POst Sec -->
+                                </div>
+
+
+                            </div>
+                            <div class="related-posts">
+
+                                <div class="related">
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="post-style2">
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                            </div>
+                                            <div class="col-md-6">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- Related Posts -->
+
+
+                            </div><!-- Comment -->
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+
+
+
+{% endblock %}
+
+

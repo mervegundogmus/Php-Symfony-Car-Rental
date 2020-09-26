@@ -1,0 +1,80 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Rent Home Page
+{% endblock %}
+
+{% block body %}
+
+	<div class="dashboard-wrapper">
+		<div class="container-fluid dashboard-content">
+			<div class="row">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+					<h3 class="text-center">
+
+						<h1>Rent a Car List</h1>
+
+						<table class="table">
+							<thead>
+								<tr>
+									<th>User Name</th>
+									<th>Car Name</th>
+									<th>Name</th>
+									<th>Surname</th>
+									<th>Email</th>
+									<th>Phone</th>
+									<th>Days</th>
+									<th>Totalprice</th>
+									<th>Message</th>
+									<th>Status</th>
+									<th>Price</th>
+									<th>Rent in</th>
+									<th>Rent out</th>
+									<th>Created_at</th>
+									<th>actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for rent in rents %}
+									<tr>
+
+										<td>
+											<a href="{{ path('admin_user_show', {'id': rent.userid}) }}">
+												{{ rent.uname }}</a>
+										</td>
+										<td>
+											<a href="{{ path('admin_araba_show', {'id': rent.carid}) }}">
+												{{ rent.cname }}</td>
+										</td>
+										<td>{{ rent.name }}</td>
+										<td>{{ rent.surname }}</td>
+										<td>{{ rent.email }}</td>
+										<td>{{ rent.phone }}</td>
+										<td>{{ rent.day }}</td>
+										<td>{{ rent.totalprice }}</td>
+										<td>{{ rent.message }}</td>
+										<td>{{ rent.status }}</td>
+										<td>{{ rent.price }}</td>
+
+										<td>{{ rent.rentin | date('m/d/Y') }}</td>
+										<td>{{ rent.rentout | date('m/d/Y') }}</td>
+
+										<td>{{ rent.created_at ? rent.created_at|date('Y-m-d H:i:s') }}</td>
+										<td>
+											<a class="btn btn-primary" href="{{ path('admin_rent_show', {'id': rent.id}) }}">show</a>
+											<a class="btn btn-warning" href="{{ path('admin_rent_edit', {'id': rent.id}) }}">edit</a>
+										</td>
+									</tr>
+								{% else %}
+									<tr>
+										<td colspan="19">no records found</td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+
+						<a href="{{ path('admin_rent_new') }}">Create new</a>
+					</div>
+				</div>
+			</div>
+
+		{% endblock %}

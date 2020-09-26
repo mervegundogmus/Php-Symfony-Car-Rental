@@ -1,0 +1,81 @@
+<!-- Main wrapper -->
+<div
+	class="wrapper" id="wrapper">
+	<!-- Header -->
+	<header id="wn__header" class="header__area header__absolute sticky__header">
+		<div class="container-fluid">
+			<div class="row">
+				
+				<div class="col-lg-8 d-none d-lg-block">
+					<nav class="mainmenu__nav">
+						<ul class="meninmenu d-flex justify-content-start">
+							<li class="drop with--one--item">
+								<a href="/">Anasayfa</a>
+							</li>
+
+							<li>
+								<a href="/aboutus">Hakkımızda</a>
+							</li>
+
+							<li>
+								<a href="/contact">İletişim</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-6 col-sm-6 col-6 col-lg-2">
+					<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+					
+						<li class="setting__bar__icon">
+							<a class="setting__active" href="#"></a>
+							<div class="searchbar__content setting__block">
+								<div class="content-inner">
+									{% if app.user %}
+										<div class="thumb">
+											<img src="{{asset('uploads/images/'~ app.user.image)}}" height="80"><br>
+											<span style="margin-right:10px;">{{app.user.name}}</span>
+											<span>{{app.user.surname}}</span>
+										</div>
+									{% endif %}
+									<div class="switcher-currency">
+										<strong class="label switcher-label">
+											<span>Hesabım
+											</span>
+										</strong>
+										<div class="switcher-options">
+											<div class="switcher-currency-trigger">
+												<div class="setting__menu">
+													{% if app.user %}
+														<span>
+															<a href="/user">Kullanıcı Paneli</a>
+														</span>
+														<span>
+															<a href="/user/rent">Kiralanan Arabalar</a>
+														</span>
+															<span>
+															<a href="/logout">Log Out</a>
+														</span>
+													{% else %}
+														<span>
+															<a href="/loginuser">Login</a>
+														</span>
+														<span>
+															<a href="/registeruser">Register</a>
+														</span>
+													{% endif %}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="mobile-menu d-block d-lg-none"></div>
+			<!-- Mobile Menu -->
+		</div>
+	</header>
+	<!-- //Header -->

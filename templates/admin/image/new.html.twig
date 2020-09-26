@@ -1,0 +1,81 @@
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{{ asset('assets') }}/admin/vendor/bootstrap/css/bootstrap.min.css">
+<link href="{{ asset('assets') }}/admin/vendor/fonts/circular-std/style.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('assets') }}/admin/libs/css/style.css">
+<link rel="stylesheet" href="{{ asset('assets') }}/admin/vendor/fonts/fontawesome/css/fontawesome-all.css">
+
+<div class="dashboard-wrapper">
+    <div class="container-fluid dashboard-content">
+        <form role="form" method="post" id="form" name="image" action="{{ path('admin_image_new', {'id': id}) }}"  enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="title">Title</label>
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control" type="text" id="image_title" name="image[title]" maxlength="50">
+                    <input type="hidden" id="image.araba"  name="image[araba]" value="{{ id }}" class="form-control">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="exampleInputFile">Gallery</label>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="custom-file">
+                        <input class="custom-file-input" type="file" id="image_image" name="image[image]">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <button type="submit class" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Gallery</th>
+            <th>actions</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for image in images %}
+
+            <tr>
+                <td>{{ image.id }}</td>
+                <td>{{ image.title }}</td>
+
+                <td> <img src="{{  asset('uploads/images/' ~ image.image) }}" height="50">
+                </td>
+                <td>
+                    <form method="post" action="{{ path('admin_image_delete', {'id': image.id,'hid': id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ image.id) }}">
+                        <button class="btn btn-block btn-danger">Delete</button>
+                    </form>
+                </td>
+
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="13">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+

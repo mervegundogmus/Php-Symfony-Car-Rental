@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block head %} {% include ('admin/head.html.twig') %}{% endblock %}
+</head>
+<body>
+
+{% block header %} {% include ('admin/header.html.twig') %} {% endblock %}
+{% block sidebar %} {% include ('admin/sidebar.html.twig') %} {% endblock %}
+{% block body %} {% endblock %}
+{% block footer %} {% include ('admin/footer.html.twig') %} {% endblock %}
+
+{% block javascripts %}  {% endblock %}
+</body>
+</html>

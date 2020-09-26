@@ -1,0 +1,28 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Edit Category{% endblock %}
+
+{% block body %}
+<div class="dashboard-wrapper">
+    <div class="container-fluid dashboard-content">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h3 class="text-center">
+
+                    <h1>Edit Category Page</h1>
+
+                    <div class="card-body border-top">
+                        {{ include('admin/category/_form.html.twig', {'button_label': 'Update'}) }}
+
+                        <a href="{{ path('admin_category_index') }}" <span class="btn btn-secondary btn-block">back to list</span></a>
+
+                    </div>
+                </h3>
+
+                {{ include('admin/category/_delete_form.html.twig') }}
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

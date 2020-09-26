@@ -1,0 +1,133 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}Araba index{% endblock %}
+
+{% block body %}
+
+<section class="block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+
+
+                    <aside class="col-md-4 column">
+
+                        <div class="follow_widget widget">
+
+
+                        </div><!-- Follow Widget -->
+
+                        <div class="search_widget widget">
+                            <div class="heading2">
+                                <h2>Welcome</h2>
+
+                            </div><!--
+                         Search Widget -->
+
+                            {{ include('user/usermenu.html.twig') }}
+
+
+                    </aside>
+
+                    <div class="col-md-8 column">
+                        <div class="single-post-sec">
+                            <div class="blog-post">
+                                <div class="post-thumb">
+
+                                    <div class="category_widget widget">
+                                        <div class="heading2">
+
+
+                                        <h1>Arabalar</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Keywords</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Rating</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Detail</th>
+                <th>Userid</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for araba in arabas %}
+            <tr>
+                <td>{{ araba.id }}</td>
+                <td>{{ araba.title }}</td>
+                <td>{{ araba.keywords }}</td>
+                <td>{{ araba.description }}</td>
+                <td><a href="{{ path('user_araba_show', {'id': araba.id}) }}"><img src="{{  asset('uploads/images/' ~ araba.image) }}" height="40"></a></td>
+                <td>{{ araba.rating }}</td>
+                <td>{{ araba.address }}</td>
+                <td>{{ araba.phone }}</td>
+                <td>{{ araba.email }}</td>
+
+
+
+
+                <td>{{ araba.status }}</td>
+                <td>{{ araba.detail }}</td>
+                <td>{{ araba.userid }}</td>
+                <td>
+                    <a href="{{ path('user_araba_show', {'id': araba.id}) }}">show</a>
+                    <a href="{{ path('user_araba_edit', {'id': araba.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="15">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_araba_new') }}">Create new</a>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div><!-- Blog Post -->
+                        </div><!-- Blog POst Sec -->
+                    </div>
+
+
+                </div>
+                <div class="related-posts">
+
+                    <div class="related">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="post-style2">
+
+                                </div>
+                                <div class="col-md-6">
+
+                                </div>
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Related Posts -->
+
+
+                </div><!-- Comment -->
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

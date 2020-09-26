@@ -1,0 +1,26 @@
+ <!-- Start Slider area -->
+        <div class="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
+        	
+			{% for rs in slider %}
+			<!-- Start Single Slide -->
+			
+	        <div class="slide animation__style10 fullscreen align__center--left" style="background-image: url({{asset('uploads/images/' ~ rs.image)}}); background-position: center; background-size: cover;">
+	            <div class="container">
+	            	<div class="row">
+	            		<div class="col-lg-12">
+	            			<div class="slider__content">
+		            			<div class="contentbox">
+		            			
+				                   	<a class="shopbtn" href="{{ path('car_show', {'id':rs.id})}}" style="font-size: 30px;;">Arabayi Kirala</a>
+		            			</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            </div>
+            </div>
+            <!-- End Single Slide -->
+        	
+			{% endfor %}
+
+
+        </div>

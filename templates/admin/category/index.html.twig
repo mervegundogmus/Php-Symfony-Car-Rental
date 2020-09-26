@@ -1,0 +1,70 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Category Home Page{% endblock %}
+
+{% block body %}
+    <form name="category" method="post">
+        <div class="dashboard-wrapper">
+            <div class="container-fluid dashboard-content">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h3 class="text-center">
+
+
+                            <h1>Category List Table</h1>
+
+
+
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Parentid</th>
+                                    <th>Title</th>
+                                    <th nowrap>Keywords</th>
+                                    <th>Description</th>
+                                    <th>Image</th>
+                                    <th>Status</th>
+                                    <th>Details</th>
+
+                                    <th>actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for category in categories %}
+                                    <tr>
+                                        <td>{{ category.id }}</td>
+                                        <td>{{ category.parentid }}</td>
+                                        <td>{{ category.title }}</td>
+                                        <td nowrap>{{ category.keywords }}</tdnowrap>
+                                        <td>{{ category.description }}</td>
+
+                                        <td> <img src="{{  asset('uploads/images/' ~ category.image) }}" height="50"></td>
+
+
+                                        <td>{{ category.status }}</td>
+
+                                        <td>
+                                            <a href="{{ path('admin_category_show', {'id': category.id}) }}" class="btn btn-success" >show</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ path('admin_category_edit', {'id': category.id}) }}" class="btn btn-secondary">edit</a>
+                                        </td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <td colspan="10">no records found</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+
+                            <a href="{{ path('admin_category_new') }}"<span class="btn btn-primary">Create new</span></a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+    </form>
+
+{% endblock %}

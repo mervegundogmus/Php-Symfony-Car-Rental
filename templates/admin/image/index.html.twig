@@ -1,0 +1,53 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Image Page{% endblock %}
+
+{% block body %}
+<SCRIPT language="JavaScript" type="text/javascript">
+    function openWin( windowURL, windowName, windowFeatures) {window.open( windowURL, windowName, windowFeatures) ; }
+</SCRIPT>
+
+<form name="category" method="post">
+    <div class="dashboard-wrapper">
+        <div class="container-fluid dashboard-content">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h3 class="text-center">
+    <h1>Image Page</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Gallery</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for image in images %}
+            <tr>
+                <td>{{ image.id }}</td>
+                <td>{{ image.title }}</td>
+                <td> <img src="{{  asset('uploads/images/' ~ image.image) }}" height="50"></td>
+                <td>
+                    <a href="{{ path('admin_image_show', {'id': image.id}) }}" class="btn btn-success" >show</a>
+                </td>
+                <td>
+                    <a href="{{ path('admin_image_edit', {'id': image.id}) }}" class="btn btn-secondary">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+                </div>
+            </div>
+        </div>
+
+</form>
+{% endblock %}

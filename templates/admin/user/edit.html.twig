@@ -1,0 +1,28 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+<div class="dashboard-wrapper">
+    <div class="container-fluid dashboard-content">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h3 class="text-center">
+
+                <h1>Edit User</h1>
+
+                    <td>
+    {{ include('admin/user/_form.html.twig', {'button_label': 'Update'}) }}
+
+                    </td>
+<td>
+    <a href="{{ path('admin_user_index') }}">back to list</a></td>
+
+    {{ include('admin/user/_delete_form.html.twig') }}
+</td>
+            </div>
+        </div>
+
+    </div>
+
+    {% endblock %}

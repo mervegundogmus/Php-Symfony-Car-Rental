@@ -1,0 +1,29 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+
+
+<form name="araba" method="post">
+    <div class="dashboard-wrapper">
+        <div class="container-fluid dashboard-content">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h3 class="text-center">
+
+    <h1>Create new User</h1>
+
+    {{ include('admin/user/_form.html.twig') }}
+
+    <a href="{{ path('admin_user_index') }}">back to list</a>
+
+
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+</form>
+
+{% endblock %}

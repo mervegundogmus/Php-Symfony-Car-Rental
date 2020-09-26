@@ -1,0 +1,96 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Araba Home Page{% endblock %}
+
+{% block body %}
+
+    <SCRIPT language="JavaScript" type="text/javascript">
+        function openWin( windowURL, windowName, windowFeatures) {window.open( windowURL, windowName, windowFeatures) ; }
+    </SCRIPT>
+
+    <form name="araba" method="post">
+        <div class="dashboard-wrapper">
+            <div class="container-fluid dashboard-content">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h3 class="text-center">
+
+                            <h1>Araba Listesi</h1>
+                        </h3>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                                <li class="breadcrumb-item active">Araba List</li>
+                            </ol>
+                        </div>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Keywords</th>
+                                    <th>Description</th>
+                                    <th>Image</th>
+                                    <th>Rating</th>
+                                    <th>Address</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Price</th>
+                                    <th>City</th>
+                                    <th>Location</th>
+                                    <th>Gallery</th>
+                                    <th>Status</th>
+                                    <th>actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                {% for araba in arabas %}
+
+                                    <tr>
+                                        <td>{{ araba.id }}</td>
+                                        <td>{{ araba.title }}</td>
+                                        <td nowrap>{{ araba.keywords }}</td>
+                                        <td>{{ araba.description }}</td>
+                                        <td> <img src="{{  asset('uploads/images/' ~ araba.image) }}" height="50"></td>
+                                        <td>{{ araba.rating }}</td>
+                                        <td>{{ araba.address }}</td>
+                                        <td>{{ araba.phone }}</td>
+                                        <td>{{ araba.email }}</td>
+                                        <td>{{ araba.price }}</td>
+                                        <td>{{ araba.city }}</td>
+                                        <td>{{ araba.location }}</td>
+                                        <td>
+                                            <a href="javascript:openWin('{{ path('admin_image_new', {'id': araba.id}) }}','','toolbar=no,location=no,directories=0,status=no,top=50,left=100,menuBar=no,scrollBars=yes,resizable=no,width=900,height=600');">
+                                                <img src="{{ asset('assets/admin/images') }}/index.png" height="40">
+                                            </a>
+                                        </td>
+                                        <td>{{ araba.status }}</td>
+
+                                        <td>
+                                            <a href="{{ path('admin_araba_show', {'id': araba.id}) }}" class="btn btn-success">show</a>
+                                        </td>
+                                        <td>
+                                            <a href="{{ path('admin_araba_edit', {'id': araba.id}) }}" class="btn btn-secondary">edit</a>
+
+                                        </td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <td colspan="13">no records found</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+
+
+                            <a href="{{ path('admin_araba_new') }}" <span class="btn btn-primary">Create new</span></a>
+
+                        </h3>
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

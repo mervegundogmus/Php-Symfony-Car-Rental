@@ -1,0 +1,78 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Araba{% endblock %}
+
+{% block body %}
+<div class="dashboard-wrapper">
+    <div class="container-fluid dashboard-content">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h3 class="text-center">
+           <h1>Show Araba Page</h1>
+
+             <table class="table">
+             <tbody>
+                   <tr>
+                      <th>Id</th>
+                    <td>{{ araba.id }}</td>
+                   </tr>
+                   <tr>
+                <th>Title</th>
+                <td>{{ araba.title }}</td>
+            </tr>
+            <tr>
+                <th>Keywords</th>
+                <td>{{ araba.keywords }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ araba.description }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ araba.image }}</td>
+            </tr>
+            <tr>
+                <th>Rating</th>
+                <td>{{ araba.rating }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ araba.address }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ araba.phone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ araba.email }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ araba.city }}</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>{{ araba.location }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ araba.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+                    <div class="card-body border-top">
+                        <a href="{{ path('admin_araba_index') }}" <span class="btn btn-success">back to list</span></a>
+
+                        <a href="{{ path('admin_araba_edit', {'id': araba.id}) }}"  <span class="btn btn-secondary">edit</span></a>
+                   </div>
+                </h3>
+
+    {{ include('admin/araba/_delete_form.html.twig') }}
+                </h3>
+            </div>
+        </div>
+    </div>
+{% endblock %}

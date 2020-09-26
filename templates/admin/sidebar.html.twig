@@ -1,0 +1,88 @@
+<!-- left sidebar -->
+<!-- ============================================================== -->
+<div class="nav-left-sidebar sidebar-dark">
+    <div class="user-panel mt3 pb-3 mb-3 d-flex">
+        <div class="image">
+            <img src=" {{ asset('uploads/images/' ~ app.user.image) }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+            <a href="#" class="d-block">{{ app.user.name }} {{ app.user.surname }}</a>
+            <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    </div>
+    <div class="menu-list">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="d-xl-none d-lg-none" href="#">Car Rents</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-divider">
+                        Menu
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Car Rents</a>
+                        <div id="submenu-1" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/admin/rent/new">New</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/admin/rent/accepted">Accepted</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/admin/rent/canceled">Canceled</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/admin/rent/Completed">Complated</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/category"><i class="fas fa-fw fa-chart-pie"></i>Category</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/araba"> <i class="fa fa-fw fa-car"></i>Araba</a>
+
+                    </li>
+                    <li class="nav-divider">
+                        GENERAL
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/setting"><i class="fas fa-cogs"></i>Setting</a>
+                        <div id="submenu-6" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/user"><i class="fas fa-users"></i>Users</a>
+                        <div id="submenu-6" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                            </ul>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+
+</div>
+<!-- ============================================================== -->
+<!-- end left sidebar -->

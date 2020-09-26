@@ -1,0 +1,68 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Setting Page{% endblock %}
+
+{% block body %}
+<div class="dashboard-wrapper">
+    <div class="container-fluid dashboard-content">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <h2 class="text-center">
+    <h1>Setting index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Keywords</th>
+                <th>Description</th>
+                <th>Company</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Fax</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Status</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for setting in settings %}
+            <tr>
+                <td>{{ setting.id }}</td>
+                <td>{{ setting.title }}</td>
+                <td>{{ setting.keywords }}</td>
+                <td>{{ setting.description }}</td>
+                <td>{{ setting.company }}</td>
+                <td>{{ setting.address }}</td>
+                <td>{{ setting.phone }}</td>
+                <td>{{ setting.fax }}</td>
+                <td>{{ setting.email }}</td>
+                <td>{{ setting.facebook }}</td>
+                <td>{{ setting.instagram }}</td>
+                <td>{{ setting.twitter }}</td>
+                <td>{{ setting.contact }}</td>
+                <td>{{ setting.status }}</td>
+                <td>
+                    <a href="{{ path('setting_show', {'id': setting.id}) }}" class="btn btn-success">show</a>
+                </td>
+                <td>
+                    <a href="{{ path('setting_edit', {'id': setting.id}) }}" class="btn btn-secondary">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="21">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+                    <a href="{{ path('setting_new') }}" <span class="btn btn-primary">Create Settings</span></a>
+
+                </h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}

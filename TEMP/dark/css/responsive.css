@@ -1,0 +1,835 @@
+@media (max-width: 1200px) {
+    .theme-layout.boxed{
+        width:95%;
+    }
+    .menu nav {
+        float: right;
+        display: none;
+    }
+    .popup-client > span {
+        margin: 22px 0;
+    }
+    .menu {
+        min-height: auto;
+    }
+    .logo {
+        padding: 23px 0 22px;
+    }
+    .popup-client {
+        margin-left: 25px;
+    }
+    .simple-header.for-sticky {
+        float: left;
+        position: relative !important;
+        width: 100%;
+        z-index: 99;
+    }
+    .menu nav {
+        background: #ffffff none repeat scroll 0 0;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 260px;
+        z-index: 9999;
+    }
+    .menu nav > ul {
+        float: left;
+        width: 100%;
+    }
+    .menu nav > ul > li {
+        background: #fafafa none repeat scroll 0 0;
+        border-bottom: 1px solid #e8ecec;
+        float: left;
+        padding: 0;
+        width: 100%;
+    }
+    .menu nav > ul > li > a {
+        float: left;
+        padding: 17px 30px;
+        width: 100%;
+    }
+    .menu-item-has-children > ul {
+        float: left;
+        opacity: 1;
+        padding: 0;
+        position: static;
+        visibility: visible;
+        width: 100%;
+        margin: 0;
+    }
+    .menu-item-has-children > ul > li {
+        margin: 0;
+    }
+    .simple-header.for-sticky.sticky > .menu nav > ul > li {
+        padding: 0;
+    }
+    .menu-item-has-children.mega > ul > li {
+        width: 100%;
+    }
+    .menu-item-has-children > ul {
+        margin: 0;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+
+    .menu-item-has-children.mega > ul {
+        width: 100%;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    .services-sec .all-services {
+        padding-top: 80px;
+    }
+    .steps-sec .row > div {
+        width: 50%;
+    }
+    .related > .row > div {
+        float: left;
+        width: 100%;
+    }
+    .square-services-sec > .row > div {
+        float: left;
+        width: 50%;
+    }
+    .lsting-agents-info > p {
+        padding: 0 33px;
+    }
+    .mini-service-info > ul > li {
+        font-size: 14px;
+        line-height: 40px;
+        padding-right: 20px;
+    }
+    .mini-service-info li > i {
+        font-size: 15px;
+        height: 40px;
+        line-height: 40px;
+        margin-right: 14px;
+        width: 40px;
+    }
+    .mini-portfolio .portfolio-info > h3 {
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .ceo-message {
+        padding: 50px 40px;
+    }
+    .social_widget > a {
+        font-size: 17px;
+        height: 50px;
+        line-height: 50px;
+        margin-right: 5px;
+        width: 50px;
+    }
+    .contact-lists-sec > ul > li {
+        float: left;
+        font-size: 15px;
+        line-height: 40px;
+        padding-right: 20px;
+    }
+    .contact-lists-sec > ul > li > i {
+        font-size: 15px;
+        height: 40px;
+        line-height: 40px;
+        margin-right: 14px;
+        width: 40px;
+    }
+    .error-not-found h3 {
+        font-size: 113px;
+    }
+    .error-not-found h3 strong {
+        font-size: 30px;
+    }
+    .error-not-found > h5 {
+        font-size: 17px;
+        line-height: 27px;
+    }
+    .col-md-8 .event-sec > .row > div {
+        width: 100%;
+    }
+    .theme-layout {
+        padding: 0 !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+    .vehiculs-sec .row > div {
+        float: left;
+        width: 50%;
+    }    
+    .theme-layout {
+        padding: 0 !important;
+    }    
+    .service-circle-sec > .row > div {
+        float: left;
+        margin-bottom: 30px;
+        width: 50%;
+    }    
+    .theme-layout.boxed{
+        width:95%;
+    }
+    .services-sec .all-services > .row > div {
+        float: left;
+        width: 50%;
+    }
+    .steps-sec .row > div {
+        float: left;
+        width: 50%;
+    }
+    .step-info {
+        padding: 0 50px;
+    }
+    .step-info > span {
+        font-size: 80px;
+        line-height: 63px;
+        margin-bottom: 16px;
+        padding-bottom: 27px;
+    }
+    .column {
+        float: left;
+        margin-bottom: 70px;
+        width: 100%;
+    }
+    .column:last-child {
+        margin-bottom: 0px;
+    }
+    .block .container {
+        padding: 0 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+    .account-popup {
+        width: 90%;
+    }
+    .popup-client > span {
+        width: 71px;
+        height: 47px;
+        color: transparent;
+    }
+    .popup-client > span i {
+        color: white;
+    }
+    header.for-sticky .popup-client > span:hover {
+        color: transparent !important;
+    }
+    .contact-item > li {
+        float: left;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        margin: 5px 0;
+    }
+    .simple-header.for-sticky .popup-client > span:hover i {
+        color: #333333;
+    }
+    .choose-language {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 7px;
+    }
+    .choose-language > a {
+        display: inline-block;
+        float: none;
+        margin: 0;
+    }
+    .contact-item {
+        width: 100%;
+    }
+    .menu nav > ul > li > a {
+        color: #333333;
+    }
+    header.simple-header.white.for-sticky .popup-client > span:hover i {
+        color: #ffffff;
+    }
+    header .menu-item-has-children > ul > li {
+        background: #f4f4f4 none repeat scroll 0 0;
+        border-color: #dfdfdf;
+    }
+    header .menu-item-has-children > ul > li > a {
+        color: #434343;
+    }
+    .square-services-sec > .row > div {
+        float: left;
+        width: 50%;
+    }
+    .fancy-testimonial-sec {
+        margin: 0;
+        width: 100%;
+    }
+    .lsting-agents-info > p {
+        padding: 0 33px;
+    }
+    .lsting-agents-info {
+        bottom: -100px;
+    }
+
+    .feature-list {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    .feature-list > i {
+        display: inline-block;
+        float: none;
+    }
+    .features-list-sec.flip .feature-list > i {
+        float: none;
+    }
+    .texty-service-sec > .row > div {
+        float: left;
+        width: 50%;
+    }
+    .who-we-are-sec .service-simple-sec .service-simple {
+        float: left;
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .fun-fact-sec > .row > div {
+        float: left;
+        margin-bottom: 30px;
+        width: 33.333%;
+    }
+    .ceo-message-sec .row > div {
+        float: left;
+        width: 100%;
+    }
+    .ceo-message {
+        margin: 0;
+        width: 100%;
+    }
+    .contact-form > form .row > div {
+        float: left;
+        width: 100%;
+    }
+    .contact-lists-sec > ul > li {
+        width: 100%;
+    }
+    .faq-form button {
+        float: right;
+        margin-top: 20px;
+    }
+    .single-post-sec .blog-post .post-detail {
+        float: left;
+        padding-bottom: 60px;
+        padding-top: 60px;
+        position: relative;
+        width: 100%;
+    }
+    blockquote {
+        padding: 50px 70px;
+    }
+		
+	.virtecal-search .form-group {
+		width: 100%;
+	}
+	.virtecal-search {
+		bottom: 20px;
+		width: 100%;
+		position: initial;
+		left: auto;
+		padding: 0px;
+		right: 46px;
+	}
+	 .virtecal-search .fsearch-title {
+    display: none;
+	}
+}
+
+@media (max-width: 767px) {
+    .vehiculs-sec .row > div {
+        float: left;
+        width: 50%;
+    }  
+    .single-post-sec .blog-post .post-detail {
+        float: left;
+        padding-bottom: 60px;
+        padding-top: 60px;
+        position: relative;
+        width: 100%;
+    } 
+    .faq-form button {
+        float: right;
+        margin-top: 20px;
+    }    
+    .contact-lists-sec > ul > li {
+        width: 100%;
+    }    
+    .comming-soon > h2 {
+        font-size: 64px;
+        line-height: 70px;
+    }
+    .comming-soon .logo > a > span {
+        font-size: 39px;
+    }
+    .countdown > li {
+        font-size: 46px;
+        margin: 0 -5px;
+    }
+    .contact-form > form .row > div {
+        float: left;
+        width: 100%;
+    } 
+    .ceo-message {
+        margin: 0;
+        width: 100%;
+    }    
+    .service-circle-sec > .row > div {
+        float: left;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    .ceo-message-sec .row > div {
+        float: left;
+        width: 100%;
+    }    
+    .who-we-are-sec .service-simple-sec > .row > div {
+        float: left;
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .fun-fact-sec > .row > div {
+        float: left;
+        margin-bottom: 20px;
+        width: 33.333%;
+    }  
+    .texty-service-sec > .row > div {
+        float: left;
+        width: 50%;
+    }
+    .square-services-sec > .row > div {
+        float: left;
+        width: 100%;
+    }    
+    .theme-layout.boxed {
+        width: 100%;
+    }
+    .services-sec .all-services > .row > div {
+        float: left;
+        width: 50%;
+    }
+    .steps-sec .row > div {
+        float: left;
+        width: 50%;
+    }
+    .step-info {
+        padding: 0 50px;
+    }
+    .step-info > span {
+        font-size: 80px;
+        line-height: 63px;
+        margin-bottom: 16px;
+        padding-bottom: 27px;
+    }   
+    .column {
+        float: left;
+        margin-bottom: 70px;
+        width: 100%;
+    }
+    .column:last-child {
+        margin-bottom: 0px;
+    }
+    .block .container {
+        padding: 0 15px;
+    }
+    .services-sec .all-services > .row > div {
+        float: left;
+        width: 50%;
+    }
+    .steps-sec .row > div {
+        float: left;
+        width: 100%;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    .popup-client > span {
+        width: 71px;
+        height: 47px;
+        color: transparent;
+    }
+    .popup-client > span i {
+        color: white;
+    }
+    header.for-sticky .popup-client > span:hover {
+        color: transparent !important;
+    }
+    .account-popup {
+        width: 98%;
+    }
+    .contact-item > li {
+        float: left;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        margin: 5px 0;
+    }
+    .choose-language {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 7px;
+    }
+    .choose-language > a {
+        display: inline-block;
+        float: none;
+        margin: 0;
+    }
+    .contact-item {
+        width: 100%;
+    }
+    .simple-header.for-sticky .popup-client > span:hover i {
+        color: #333333;
+    }
+    .menu nav > ul > li > a {
+        color: #333333;
+    }
+    header.simple-header.white.for-sticky .popup-client > span:hover i {
+        color: #ffffff;
+    }
+    header .menu-item-has-children > ul > li {
+        background: #f4f4f4 none repeat scroll 0 0;
+        border-color: #dfdfdf;
+    }
+    header .menu-item-has-children > ul > li > a {
+        color: #434343;
+    }
+    .fancy-testimonial-sec {
+        margin: 0;
+        width: 100%;
+    }
+    .lsting-agents-info > p {
+        padding: 0 33px;
+    }
+    .feature-list {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    .feature-list > i {
+        display: inline-block;
+        float: none;
+    }
+    .features-list-sec.flip .feature-list > i {
+        float: none;
+    }
+    .post-detail {
+        float: left;
+        padding: 60px 40px;
+        position: static;
+        width: 100%;
+    }
+    .blog-post {
+        position: relative;
+    }
+    .post-admin {
+        padding: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+    .post-admin a h5 {
+        display: none;
+    }
+    .post-admin a span {
+        display: none;
+    }
+    .error-not-found > span {
+        text-align: center;
+    }
+    .error-not-found h3 {
+        font-size: 60px;
+        text-align: center;
+    }
+    .error-not-found > h5 {
+        text-align: center;
+    }
+    .error-not-found > ul {
+        text-align: center;
+    }
+    .error-not-found > ul > li {
+        display: inline-block;
+        float: none;
+        margin: 5px 20px;
+    }
+    .single-post-sec .blog-post .post-detail .post-admin {
+        float: left;
+        position: static;
+        width: 100%;
+    }
+    .single-post-sec .blog-post .post-detail .post-admin h5 {
+        display: block;
+    }
+    .single-post-sec .blog-post .post-detail .post-admin span {
+        display: block;
+    }
+    .single-post-sec h1 {
+        font-size: 23px;
+    }
+    blockquote {
+        padding: 40px;
+    }
+	
+	.virtecal-search .form-group {
+		width: 100%;
+	}
+	.virtecal-search {
+		bottom: 20px;
+		width: 100%;
+		position: initial;
+		left: auto;
+		padding: 0px;
+		right: 46px;
+	}
+	
+}
+
+@media (max-width: 480px)  {
+    .vehiculs-sec .row > div {
+        float: left;
+        width: 100%;
+    }    
+    .who-we-are-sec > h3 {
+        font-size: 18px;
+    }
+    .who-we-are-sec .service-simple-sec > .row > div {
+        margin-bottom: 30px;
+        width: 100%;
+        float: left;
+    }
+    .fancy-testimonial-sec {
+        padding: 50px 20px;
+    }    
+    .theme-layout.boxed {
+        width: 100%;
+    }
+    .services-sec .all-services > .row > div {
+        float: left;
+        width: 100%;
+    }
+    .step-info > span {
+        font-size: 29px;
+        line-height: 29px;
+        margin-bottom: 7px;
+        padding-bottom: 17px;
+    }
+    .step-info > h3 {
+        font-size: 18px;
+        margin: 10px 0 9px;
+    }
+    .flat-btn {
+        border: 1px solid transparent;
+        color: #fff;
+        float: left;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 13px 21px;
+    }
+    .post2-thumb {
+        display: table;
+        float: left;
+        margin: 0 0 20px;
+        width: 100%;
+    }
+    .account-popup {
+        width: 98%;
+    }
+    .account-user {
+        padding: 110px 35px;
+    }
+    .registration-sec {
+        padding: 70px 36px;
+    }
+    .popup-client {
+        margin-left: 3px;
+    }
+    .contact-item > li {
+        float: left;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        margin: 5px 0;
+    }
+    .choose-language {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 7px;
+    }
+    .choose-language > a {
+        display: inline-block;
+        float: none;
+        margin: 0;
+    }      
+    .agents-carousal-sec .owl-nav > div {
+        display: none !important;
+    }
+    .agents-carousal-sec > ul li h3 {
+        font-size: 19px;
+    }
+
+    .menu nav > ul > li > a {
+        color: #333333;
+    }
+    header.simple-header.white.for-sticky .popup-client > span:hover i {
+        color: #ffffff;
+    }
+    header .menu-item-has-children > ul > li {
+        background: #f4f4f4 none repeat scroll 0 0;
+        border-color: #dfdfdf;
+    }
+    header .menu-item-has-children > ul > li > a {
+        color: #434343;
+    }
+    .square-services-sec > .row > div {
+        float: left;
+        width: 100%;
+    }
+    .fancy-testimonial-sec .nav.nav-tabs > li {
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+    .fancy-testimonial-sec .nav.nav-tabs > li > a {
+        float: left;
+        height: 50px;
+        margin: 0 0 20px;
+        width: 100%;
+    }
+    .fancy-testimonial-sec .nav.nav-tabs > li.active {
+        margin-bottom: 79px;
+    }
+    .heading4 > h2 {
+        font-size: 22px;
+    }
+    .mini-service-info > ul > li {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 13px;
+    }  
+    .post-detail {
+        float: left;
+        padding: 60px 40px;
+        position: static;
+        width: 100%;
+    }
+    .blog-post {
+        position: relative;
+    }
+    .post-admin {
+        padding: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+    .post-admin a h5 {
+        display: none;
+    }
+    .post-admin a span {
+        display: none;
+    }
+    .texty-service-sec > .row > div {
+        float: left;
+        width: 100%;
+    }
+    .contact-form > form .row > div {
+        float: left;
+    }
+    .fun-fact-sec > .row > div {
+        float: left;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    .inner-content > span {
+        bottom: 0;
+        height: 100%;
+        top: auto;
+        width: 90px;
+    }
+    .inner-content > span > i {
+        font-size: 34px;
+    }
+    .inner-content {
+        padding-left: 120px;
+    }
+    .inner-content h2 {
+        font-size: 24px;
+    }
+    .inner-content li a {
+        font-size: 13px;
+    }
+    .comming-soon > h2 {
+        font-size: 44px;
+        line-height: 52px;
+    }
+    .countdown > li {
+        float: left;
+        margin: 0 0 30px;
+        text-align: center;
+        transform: rotate(0deg);
+        width: 50%;
+    }
+    .contact-lists-sec > ul > li {
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+    .contact-lists-sec > ul > li > i {
+        display: table;
+        float: none;
+        margin: 0 auto;
+    }
+    .our-clients-sec { 
+        padding: 0 40px; 
+    }
+		.virtecal-search .form-group {
+		width: 100%;
+	}
+	.virtecal-search {
+		bottom: 20px;
+		width: 100%;
+		position: initial;
+		left: auto;
+		padding: 0px;
+		right: 46px;
+	}
+	.virtecal-search .fsearch-title {
+    display: none;
+	}
+}
+
+
+@media (min-width: 480px) and (max-width: 767px){
+
+    .vehiculs-thumb ul.vehicul-info {
+        left: 0px;
+        min-width: 213px;
+        padding: 8px 10px 8px 10px;
+        margin-left: -3px;
+    }
+	.virtecal-search .form-group {
+		width: 100%;
+	}
+	.virtecal-search {
+		bottom: 20px;
+		width: 100%;
+		position: initial;
+		left: auto;
+		padding: 0px;
+		right: 46px;
+	}
+	 .virtecal-search .fsearch-title {
+    display: none;
+	}
+	
+}
